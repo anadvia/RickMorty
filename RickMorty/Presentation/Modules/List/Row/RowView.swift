@@ -28,7 +28,7 @@ struct RowView: View {
 						.clipShape(Circle())
 				}
 			}
-			VStack {
+			VStack(alignment: .leading) {
 				Text(character.name)
 				HStack {
 					Circle()
