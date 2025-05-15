@@ -27,7 +27,6 @@ struct RelatedCharacterRow: View {
 					.background(.gray)
 					.opacity(0.5)
 					.clipShape(Circle())
-				
 			}
 		}
 	}

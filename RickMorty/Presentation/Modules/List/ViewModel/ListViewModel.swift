@@ -7,8 +7,7 @@
 
 import Foundation
 
-@MainActor
-class ListViewModel: ObservableObject {
+class ListViewModel: ObservableObject, ListViewModelProtocol {
 	let repository = CharacterRepository()
 	lazy var useCase: CharacterUseCaseProtocol = {
 		CharacterUseCase(repository: repository)
@@ -23,6 +22,7 @@ class ListViewModel: ObservableObject {
 		}
 	}
 	
+	@MainActor
 	func loadCharacters() async {
 		do {
 			let (characters, hasNextPage) = try await useCase.getCharactersAndNextPage(for: page)
