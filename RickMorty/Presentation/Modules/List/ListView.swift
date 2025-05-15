@@ -16,6 +16,7 @@ struct ListView: View {
 					NavigationLink(destination: DetailCharacterView(characterID: character.id)) {
 						RowView(character: character)
 					}
+					.buttonStyle(.plain)
 				}
 				.listRowSeparator(.hidden)
 				Button {
